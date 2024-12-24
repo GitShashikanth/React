@@ -1,0 +1,26 @@
+.navContainer {
+  display: flex;
+  width: 100%;
+}
+
+.leftPanel {
+  background-color: rgb(148, 156, 156);
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: beige;
+}
+
+.rightPanel {
+  background-color: aquamarine;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightPanel a {
+  text-decoration: none;
+  margin-right: 40px;
+}

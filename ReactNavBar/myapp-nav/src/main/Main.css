@@ -1,0 +1,89 @@
+/* Main container styling */
+.mainImgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Align items to stretch to full height */
+  margin: 50px 75px;
+  height: 400px;
+}
+
+/* Right image panel styling */
+.rightImgPanel {
+  background-color: rgb(169, 170, 170);
+  width: 45%; /* Adjusted width for proper layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures content doesn't overflow */
+  margin: 14px 14px;
+}
+
+/* Ensures the image scales properly within the panel */
+.rightImgPanel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scales the image without distortion */
+}
+
+/* Left image panel styling */
+.leftImgPanel {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Adds spacing between the top and bottom images */
+  margin: 14px;
+}
+
+/* Top image styling */
+.topImage {
+  background-color: rgb(169, 170, 170);
+  flex: 1; /* Takes equal space within leftImgPanel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+/* Optional styling for images inside topImage */
+.topImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scales the image without distortion */
+}
+
+/* Bottom image styling */
+.btmImage {
+  background-color: rgb(169, 170, 170);
+  flex: 1; /* Takes equal space within leftImgPanel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+/* Optional styling for images inside btmImage */
+.btmImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scales the image without distortion */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mainImgContainer {
+    flex-direction: column; /* Stack panels vertically on small screens */
+    height: auto; /* Adjust height dynamically */
+    margin: 20px; /* Reduce margins */
+  }
+
+  .rightImgPanel,
+  .leftImgPanel {
+    width: 100%; /* Panels take full width on small screens */
+    height: auto; /* Adjust height dynamically */
+  }
+
+  .topImage,
+  .btmImage {
+    height: 150px; /* Set fixed height for small screens */
+  }
+}

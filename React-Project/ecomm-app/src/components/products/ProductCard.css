@@ -1,0 +1,73 @@
+/* General card container */
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  height: 350px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  background: #fff;
+  text-align: center;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Content styles */
+.card-content {
+  padding: 0 8px;
+  text-align: center;
+  flex-grow: 1;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.product-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Category */
+.product-category {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+/* Price Section */
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  margin: 8px 0;
+}
+
+/* Parent container - 5 cards per row */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+/* Ensure 5 items per row */
+.card {
+  flex-basis: calc(20% - 16px); /* 20% width minus the gaps */
+  max-width: calc(20% - 16px);
+}
